@@ -1,0 +1,313 @@
+@charset "utf-8";
+/*
+   New Perspectives on HTML5, CSS3, and JavaScript 6th Edition
+   Tutorial 14
+   Case Problem 4
+   
+
+   Kidder Garden Layout Style Sheet
+   
+   Filename: kg_layout.css
+
+*/
+
+/* HTML and Body Styles */
+
+html {
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 171, 78),
+    rgb(0, 64, 32) 85%,
+    rgb(0, 20, 8)
+  );
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 12px;
+}
+
+body {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  background: transparent;
+  width: 1200px;
+  margin: 0px auto;
+}
+
+body section#left {
+  -webkit-flex: 0 0 150px;
+  flex: 0 0 150px;
+  background: url(kg_back1.png) top right no-repeat,
+    url(kg_back3.png) top right repeat-y;
+  border-right: 2px solid rgb(41, 131, 0);
+}
+
+body section#right {
+  -webkit-flex: 0 0 150px;
+  flex: 0 0 150px;
+  background: url(kg_back2.png) top left no-repeat,
+    url(kg_back4.png) top left repeat-y;
+  border-left: 2px solid rgb(41, 131, 0);
+}
+
+body section#main {
+  -webkit-flex: 1 1 0px;
+  flex: 1 1 0px;
+  background-color: white;
+  height: 100%;
+  display: -webkit-flex;
+  display: flex;
+  webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+/* Header Styles */
+
+section#main > header {
+  width: 100%;
+}
+
+section#main > header img {
+  display: block;
+  margin: 0px auto;
+  width: 100%;
+}
+
+/* Top Navigation Styles */
+
+nav#top ul {
+  margin-top: 0px;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row nowrap;
+  flex-flow: row nowrap;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-align-items: center;
+  align-items: center;
+  background-color: white;
+  height: 120px;
+}
+
+nav#top ul li {
+  -webkit-flex: 0 1 130px;
+  flex: 0 1 130px;
+  margin: 5px;
+  border-radius: 50%;
+  border: 10px double rgb(255, 200, 158);
+}
+
+nav#top ul li a {
+  color: rgb(0, 171, 78);
+  display: block;
+  font-size: 1.8em;
+  line-height: 2.5em;
+  height: 2.5em;
+  text-align: center;
+  font-family: "Comic Sans MS", cursive, sans-serif;
+}
+
+nav#top ul li a:hover,
+nav#top ul li a:active {
+  color: rgb(101, 101, 255);
+}
+
+/* Layout Styles */
+
+section#main > h1 {
+  width: 100%;
+  margin: 0px auto;
+  padding: 20px 0px 0px;
+  text-align: left;
+  border-top: 1px solid rgb(255, 115, 3);
+}
+
+section#main > p {
+  font-size: 1.2em;
+  line-height: 1.4em;
+  margin: 0px 50px 10px;
+  width: 100%;
+}
+
+section#main > p img {
+  display: inline-block;
+  box-shadow: 0px 0px 5px black;
+  margin: 0px 2px;
+  width: 18px;
+  outline: 1px solid rgb(211, 211, 211);
+}
+
+aside#controls {
+  -webkit-flex: 0 0 250px;
+  flex: 0 0 250px;
+}
+
+aside#drawing {
+  -webkit-flex: 3 1 350px;
+  flex: 1 1 350px;
+}
+
+/* Stamp Styles */
+
+table#shapes {
+  margin: 20px 0px 10px 20px;
+}
+
+table#shapes caption {
+  font-size: 1.8em;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  text-align: left;
+  margin: 10px 0px 20px 0px;
+}
+
+table#shapes td {
+  text-align: center;
+  vertical-align: middle;
+  width: 40px;
+}
+
+table#shapes img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+}
+
+/* Size Control Styles */
+
+div#sizes {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-flow: row wrap;
+  flex-flow: row wrap;
+  -webkit-align-items: center;
+  align-items: center;
+  margin: 5px 0px 10px 20px;
+}
+
+div#sizes h1 {
+  text-align: left;
+  font-size: 1.8em;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  margin: 10px 0px 20px 0px;
+  width: 100%;
+}
+
+div#sizes div.controlSize {
+  background-color: rgb(0, 171, 78);
+  margin: 0px 10px 0px 0px;
+  cursor: pointer;
+}
+
+div#sizes div#size0 {
+  -webkit-flex: 0 0 20px;
+  flex: 0 0 20px;
+  height: 20px;
+}
+
+div#sizes div#size1 {
+  -webkit-flex: 0 0 40px;
+  flex: 0 0 40px;
+  height: 40px;
+}
+
+div#sizes div#size2 {
+  -webkit-flex: 0 0 60px;
+  flex: 0 0 60px;
+  height: 60px;
+}
+
+/* Shade Control Styles */
+
+table#shades {
+  border-collapse: collapse;
+  margin: 20px 0px 10px 20px;
+}
+
+table#shades caption {
+  font-size: 1.8em;
+  font-weight: normal;
+  letter-spacing: 0.1em;
+  text-align: left;
+  margin: 10px 0px 20px 0px;
+}
+
+table#shades td {
+  width: 20px;
+  height: 20px;
+  border: 2px solid white;
+  cursor: pointer;
+  background-color: rgb(101, 101, 101);
+}
+
+table#shades td#shade10 {
+  opacity: 0.1;
+}
+table#shades td#shade30 {
+  opacity: 0.3;
+}
+table#shades td#shade50 {
+  opacity: 0.5;
+}
+table#shades td#shade70 {
+  opacity: 0.7;
+}
+table#shades td#shade100 {
+  opacity: 1;
+}
+
+/* Garbage Styles */
+
+img#garbage {
+  display: block;
+  margin: 50px auto 5px;
+  cursor: pointer;
+}
+
+/* Canvas Area Styles */
+
+section#tools {
+  width: 100%;
+  height: 70px;
+  padding: 8px;
+}
+
+section#tools button {
+  display: inline-block;
+  width: 42px;
+  height: 42px;
+  margin: 8px 5px 8px 0px;
+  border: 5px outset rgba(121, 121, 121, 0.8);
+}
+
+section#tools button img {
+  width: 100%;
+  height: auto;
+}
+
+section#canvas {
+  cursor: pointer;
+  width: 100%;
+  height: 600px;
+  outline: 1px solid green;
+  overflow: hidden;
+  background-color: rgba(255, 197, 153, 0.4);
+  box-shadow: inset 0px 0px 20px rgb(51, 51, 51);
+  position: relative;
+}
+
+/* Footer Styles */
+
+footer {
+  width: 100%;
+  background-color: rgb(41, 131, 0);
+}
+
+footer p {
+  color: rgb(211, 211, 211);
+  font-size: 0.9em;
+  text-align: center;
+  margin: 0px;
+  padding: 10px 0px;
+}

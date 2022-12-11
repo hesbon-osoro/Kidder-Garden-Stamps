@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!--
+    New Perspectives on HTML5, CSS3, and JavaScript 6th Edition
+    Tutorial 14
+    Case Problem 4
+    
+    Kidder Garden Stamps Game
+    Author: Hesbon Osoro
+    Date: 12/11/22  
+
+    Filename: kg_stamps.html
+   -->
+
+    <title>Stamps at Kidder Garden</title>
+    <meta charset="utf-8" />
+    <link href="kg_base.css" rel="stylesheet" />
+    <link href="kg_layout.css" rel="stylesheet" />
+    <script src="kg_stamps.js" async></script>
+  </head>
+
+  <body>
+    <section id="left"></section>
+    <section id="main">
+      <header>
+        <img src="kg_logo.png" alt="Kidder Garden" />
+        <nav id="top">
+          <ul>
+            <li><a href="#">puzzles</a></li>
+            <li><a href="#">games</a></li>
+            <li><a href="#">riddles</a></li>
+            <li><a href="#">jokes</a></li>
+            <li><a href="#">stories</a></li>
+          </ul>
+        </nav>
+      </header>
+
+      <h1><img src="kg_stamph1.png" id="stamph1" alt="Stamps" /></h1>
+      <p>
+        Click <img src="kg_add.png" alt="" /> and then select the shape, size,
+        and shading from the tools on the left. Click anywhere within the canvas
+        to place the stamp. Remove a stamp by clicking
+        <img src="kg_remove.png" /> and clicking the stamp image on the canvas.
+        Change the stamp size by clicking the <img src="kg_enlarge.png" /> or
+        <img src="kg_shrink.png" /> buttons and clicking the stamp. Move by
+        clicking the <img src="kg_left.png" />, <img src="kg_right.png" />,
+        <img src="kg_up.png" />, or <img src="kg_down.png" /> buttons and then
+        clicking the stamp. Rotate your stamp by clicking the
+        <img src="kg_rotateright.png" /> or
+        <img src="kg_rotateleft.png" /> buttons and then clicking the stamp.
+        Decrease or increase the shading by clicking the
+        <img src="kg_lighten.png" /> or <img src="kg_darken.png" /> buttons and
+        then clicking the stamp. Remove all stamps from the canvas by clicking
+        <img src="kg_garbage.png" />.
+      </p>
+
+      <aside id="controls">
+        <table id="shapes">
+          <caption>
+            Shapes
+          </caption>
+          <tr>
+            <td>
+              <img
+                id="stamp0"
+                src="kg_stamp0.png"
+                alt=""
+                class="controlShape"
+              />
+            </td>
+            <td>
+              <img
+                id="stamp1"
+                src="kg_stamp1.png"
+                alt=""
+                class="controlShape"
+              />
+            </td>
+            <td>
+              <img
+                id="stamp2"
+                src="kg_stamp2.png"
+                alt=""
+                class="controlShape"
+              />
+            </td>
+            <td>
+              <img
+                id="stamp3"
+                src="kg_stamp3.png"
+                alt=""
+                class="controlShape"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                id="stamp4"
+                src="kg_stamp4.png"
+                alt=""
+                class="controlShape"
+              />
+            </td>
+            <td>
+              <img
+                id="stamp5"
+                src="kg_stamp5.png"
+                alt=""
+                class="controlShape"
+              />
+            </td>
+            <td>
+              <img
+                id="stamp6"
+                src="kg_stamp6.png"
+                alt=""
+                class="controlShape"
+              />
+            </td>
+            <td>
+              <img
+                id="stamp7"
+                src="kg_stamp7.png"
+                alt=""
+                class="controlShape"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                id="stamp8"
+                src="kg_stamp8.png"
+                alt=""
+                class="controlShape"
+              />
+            </td>
+            <td>
+              <img
+                id="stamp9"
+                src="kg_stamp9.png"
+                alt=""
+                class="controlShape"
+              />
+            </td>
+            <td>
+              <img
+                id="stamp10"
+                src="kg_stamp10.png"
+                alt=""
+                class="controlShape"
+              />
+            </td>
+            <td>
+              <img
+                id="stamp11"
+                src="kg_stamp11.png"
+                alt=""
+                class="controlShape"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                id="stamp12"
+                src="kg_stamp12.png"
+                alt=""
+                class="controlShape"
+              />
+            </td>
+            <td>
+              <img
+                id="stamp13"
+                src="kg_stamp13.png"
+                alt=""
+                class="controlShape"
+              />
+            </td>
+            <td>
+              <img
+                id="stamp14"
+                src="kg_stamp14.png"
+                alt=""
+                class="controlShape"
+              />
+            </td>
+            <td>
+              <img
+                id="stamp15"
+                src="kg_stamp15.png"
+                alt=""
+                class="controlShape"
+              />
+            </td>
+          </tr>
+        </table>
+
+        <div id="sizes">
+          <h1>Sizes</h1>
+          <div id="size0" class="controlSize"></div>
+          <div id="size1" class="controlSize"></div>
+          <div id="size2" class="controlSize"></div>
+        </div>
+
+        <table id="shades">
+          <caption>
+            Shades
+          </caption>
+          <tr>
+            <td id="shade10" class="controlShade"></td>
+            <td id="shade30" class="controlShade"></td>
+            <td id="shade50" class="controlShade"></td>
+            <td id="shade70" class="controlShade"></td>
+            <td id="shade100" class="controlShade"></td>
+          </tr>
+        </table>
+
+        <img src="kg_garbage.png" id="garbage" alt="" />
+      </aside>
+
+      <aside id="drawing">
+        <section id="tools">
+          <button class="toolButtons" id="addStamp">
+            <img src="kg_add.png" alt="" />
+          </button>
+          <button class="toolButtons" id="removeStamp">
+            <img src="kg_remove.png" alt="" />
+          </button>
+          <button class="toolButtons" id="enlargeStamp">
+            <img src="kg_enlarge.png" alt="" />
+          </button>
+          <button class="toolButtons" id="shrinkStamp">
+            <img src="kg_shrink.png" alt="" />
+          </button>
+          <button class="toolButtons" id="moveLeft">
+            <img src="kg_left.png" alt="" />
+          </button>
+          <button class="toolButtons" id="moveRight">
+            <img src="kg_right.png" alt="" />
+          </button>
+          <button class="toolButtons" id="moveUp">
+            <img src="kg_up.png" alt="" />
+          </button>
+          <button class="toolButtons" id="moveDown">
+            <img src="kg_down.png" alt="" />
+          </button>
+          <button class="toolButtons" id="rotateRight">
+            <img src="kg_rotateright.png" alt="" />
+          </button>
+          <button class="toolButtons" id="rotateLeft">
+            <img src="kg_rotateleft.png" alt="" />
+          </button>
+          <button class="toolButtons" id="lighten">
+            <img src="kg_lighten.png" alt="" />
+          </button>
+          <button class="toolButtons" id="darken">
+            <img src="kg_darken.png" alt="" />
+          </button>
+        </section>
+        <section id="canvas"></section>
+      </aside>
+
+      <footer>
+        <p>Kidder Garden &copy; 2018 All Rights Reserved</p>
+      </footer>
+    </section>
+    <section id="right"></section>
+  </body>
+</html>
