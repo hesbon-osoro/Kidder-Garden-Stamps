@@ -6,4 +6,6 @@
 
 [!["Buy Me A Coffee"](https://www.buymeacoffee.com/assets/img/custom_images/orange_img.png)](https://www.buymeacoffee.com/wazimu)
 
-## THE PROJECT IS NOT COMPLETE!
+## Working Sample
+
+[![Working](./assets/kg_working.PNG)](https://hesbon-osoro.github.io/Kidder-Garden-Stamps)
